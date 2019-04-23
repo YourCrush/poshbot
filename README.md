@@ -26,12 +26,13 @@ These attributes control the deployment of the PoshBot instance.
 
 All attributes below are pre-pended with `node['poshbot']`
 
-| Attribute       | Description                                                                                         | Type   | Default            |
-|-----------------|-----------------------------------------------------------------------------------------------------|--------|--------------------|
-| logdirectory    | Directory that PoshBot will store logs                                                              | String | C:\poshbot         |
-| botadmins       | Slack usernames of PoshBot admins                                                                   | String | name1, name2       |
-| plugindirectory | Directory that PoshBot will store plugins, and where it will look for new ones to install           | String | C:\poshbot\plugins |
-| token           | Slack bot token. See [here](https://api.slack.com/bot-users#creating-bot-user) for more information | String | your-bot-token     |
+| Attribute              | Description                                                                                         | Type   | Default            |
+|------------------------|-----------------------------------------------------------------------------------------------------|--------|--------------------|
+| logdirectory           | Directory that PoshBot will store logs                                                              | String | C:\poshbot         |
+| botadmins              | Slack usernames of PoshBot admins                                                                   | String | name1, name2       |
+| configurationdirectory | Directory that PoshBot will store configuration files.                                              | String | C:\poshbot         |
+| plugindirectory        | Directory that PoshBot will store plugins, and where it will look for new ones to install           | String | C:\poshbot\plugins |
+| token                  | Slack bot token. See [here](https://api.slack.com/bot-users#creating-bot-user) for more information | String | your-bot-token     |
 
 ## Testing
 
