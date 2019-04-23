@@ -1,23 +1,45 @@
-# Production Repository - PoshBot Configuration Cookbook
+![PoshBot logo](https://avatars1.githubusercontent.com/u/26032430?s=200&v=4)
 
-This cookbook installs and configures:
+# PoshBot Cookbook
 
-* NSSM ([nssm.cc](https://nssm.cc/))
-* PoshBot ([PoshBot Docs](https://poshbot.readthedocs.io/en/latest/))
-
-## Knowledge Assumptions
-
-The cookbook assumes intermediate knowledge of Chef, PowerShell and `git`.
+This cookbook installs and configures a PoshBot instance on a Windows machine.
 
 ## Requirements
 
-* You must have [Chef Workstation](https://www.chef.sh/docs/chef-workstation/getting-started/) installed on your workstation to edit this cookbook and resolve dependencies.
+- Chef 12.9+
 
-## Setup
+### Platforms
 
-1. Launch Powershell as an administrator.
-2. Clone the cookbook to your local machine.
-3. `cd` to the repository.
-4. Run `berks install` to install the cookbook dependencies. It will drop the cookbooks into `C:\Users\you\.berkshelf`.
-5. Edit the recipe(s) as needed.
+- Windows
 
+### Dependencies
+
+- [Chocolatey cookbook](https://supermarket.chef.io/cookbooks/chocolatey)
+- [Non Sucking Service Manager (NSSM)](https://nssm.cc/) (included in the recipe)
+
+## Usage
+
+Add `recipe[poshbot::default]` to your run list.
+
+### Attributes
+
+These attributes control the deployment of the PoshBot instance. 
+
+All attributes below are pre-pended with `node['poshbot']`
+
+| Attribute       | Description                                                                                         | Type   | Default            |
+|-----------------|-----------------------------------------------------------------------------------------------------|--------|--------------------|
+| logdirectory    | Directory that PoshBot will store logs                                                              | String | C:\poshbot         |
+| botadmins       | Slack usernames of PoshBot admins                                                                   | String | name1, name2       |
+| plugindirectory | Directory that PoshBot will store plugins, and where it will look for new ones to install           | String | C:\poshbot\plugins |
+| token           | Slack bot token. See [here](https://api.slack.com/bot-users#creating-bot-user) for more information | String | your-bot-token     |
+
+## Testing
+
+Testing was performed on Windows 10 v1803, Windows 10 v1803, and Windows Server 2019.
+
+## License & Maintainer
+
+Maintainer: Kyle Levenick (kyle@levenick.io)
+
+License: MIT
