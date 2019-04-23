@@ -14,7 +14,6 @@ This cookbook installs and configures a PoshBot instance on a Windows machine.
 
 ### Dependencies
 
-- [Chocolatey cookbook](https://supermarket.chef.io/cookbooks/chocolatey)
 - [Non Sucking Service Manager (NSSM)](https://nssm.cc/) (included in the recipe)
 
 ## Usage
