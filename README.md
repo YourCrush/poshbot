@@ -42,4 +42,6 @@ Testing was performed on Windows 10 v1803, Windows 10 v1803, and Windows Server 
 
 Maintainer: Kyle Levenick (kyle@levenick.io)
 
+Shout out to [Garrett Yamada](garrettyamada.com) for the assistance in testing and helping me understand Chef attributes and templates.
+
 License: MIT
