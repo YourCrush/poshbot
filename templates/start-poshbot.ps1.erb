@@ -1,5 +1,5 @@
 Import-Module PoshBot -force
-$pbc = Get-PoshBotConfiguration -Path C:\poshbot\config.psd1
+$pbc = Get-PoshBotConfiguration -Path <%= @configurationdirectory %>\config.psd1
 
 while($True) {
     try {

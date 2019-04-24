@@ -1,7 +1,6 @@
 ---
 driver:
   name: vagrant
-  provider: hyperv
   customize:
     cpus: 2
     memory: 4096
@@ -23,7 +22,7 @@ transport:
 platforms:
   - name: windows2019
     driver:
-      box: StefanScherer/windows_2019
+      box: tas50/windows_2019
       vm_hostname: test-posh
 
 suites:
